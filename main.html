@@ -5,11 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Main page sign in</title>
 </head>
-<body>
-  <input type="text" id="name"/>
-  <input type= "date" id="dob">
-  <input>
-</body>
-</html>
+<div class="form-container sign-up" id ="submit">
+  <form>
+      <h1>Create Account</h1>
+      <input type="text" id="fname" placeholder="Name">
+      <input type="date" id="dob" placeholder="Date of Birth ex. 1234-12-23">
+      <input type="email" id="regEmail" placeholder="Email">
+      <input type="password" id="regPassword" placeholder="Password">
+      <button>Sign Up</button>
+  </form>
+</div>
 
-4045487647
+<div class="form-container sign-in" id="signin">
+  <form>
+      <h1>Sign In</h1>
+      <span>or use your email password</span>
+      <input type="email" id="email" placeholder="Email">
+      <input type="password" id= "password" placeholder="Password">
+      <button submit="fetchDataFromServer">Sign In</button>
+  </form>
+</div>
+
+<script>
+  
+</script>
+</html>
