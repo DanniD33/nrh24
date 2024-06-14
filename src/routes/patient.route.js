@@ -14,4 +14,6 @@ router.put('/patients/:id', controller.update);
 
 router.delete('/patients/:id', controller.delete);
 
+router.post('/models/', controller.model);
+
 module.exports = router;
