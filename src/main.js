@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
-require('newrelic');
+//require('newrelic');
 
 const app = express();
 app.use(express.json());

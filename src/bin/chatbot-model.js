@@ -13,7 +13,6 @@ const textData = data.map((item) => item.text);
 const labels = data.map((item) => item.label);
 
 const labelMapping = { eye_doctor: 0, heart_doctor: 1 };
-// @ts-ignore
 const labelData = labels.map((label) => labelMapping[label]);
 
 const tokenizer = (text) =>
@@ -77,7 +76,7 @@ model.compile({
 const xs = tf.tensor2d(paddedData, [paddedData.length, maxLen], 'float32');
 const ys = tf.tensor1d(labelData, 'float32');
 
-export async function trainModel() {
+async function trainModel() {
   await model.fit(xs, ys, {
     epochs: 10,
     batchSize: 2,
@@ -90,7 +89,7 @@ trainModel().then(() => {
   console.log('Model training complete.');
 });
 
-export const predict = async (text) => {
+exports.predict = async (text) => {
   const tokenized = encodeText(text, vocab);
   const padded = padSequences([tokenized], maxLen);
   const prediction = model.predict(tf.tensor2d(padded));

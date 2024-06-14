@@ -2,7 +2,9 @@ const { Patient } = require("../models/patient");
 const { modelToDto}  = require("../models/util/patient.util");
 const { all, children, one, create, update, deleteEntity } = require("../models/models.util");
 const {Appointment} = require("../models/appointments");
-const  {predict} = require("src/bin/chatbot-model");
+// const  {predict} = require("../bin/chatbot-model");
+// const tf = require('@tensorflow/tfjs-node');
+
 exports.all = (req, res, next) => {
     all(Patient)
         .then(all => (res.status(200).json(all.map(patient => (modelToDto(patient))))))
@@ -11,7 +13,7 @@ exports.all = (req, res, next) => {
 
 
 exports.model = (req, res, next) => {
-    return predict(req.body);
+    return 'OK';//predict(req.body.text);
 };
 
 exports.get = (req, res, next) => {

@@ -13,11 +13,11 @@ Content-Type: application/json
 GET http://localhost:3000/patients
 
 ### Get patient 666c524d182097a2d021a793
-GET http://localhost:3000/patients/666c524d182097a2d021a793
+GET http://localhost:3000/patients/666c65c5a031b052f4d66644
 
 
 ### Create appointment for patient 666c524d182097a2d021a793
-POST http://localhost:3000/patients/666c524d182097a2d021a793/appointments
+POST http://localhost:3000/patients/666c65c5a031b052f4d66644/appointments
 Content-Type: application/json
 
 {
