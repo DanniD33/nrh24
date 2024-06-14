@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon - Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Profile</h1>
+        <button id="logoutButton">Logout</button>
+    </header>
+    <main>
+        <p>Welcome to your profile page!</p>
+        <p>Name: <span id="profileName"></span></p>
+        <p>Email: <span id="profileEmail"></span></p>
+        
+        <!-- Chat Box -->
+        <section id="chatbox">
+            <h2>Chat</h2>
+            <div id="chatMessages" class="chat-messages"></div>
+            <form id="chatForm">
+                <input type="text" id="chatInput" placeholder="Type a message..." required>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Hackathon</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
