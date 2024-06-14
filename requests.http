@@ -1,0 +1,60 @@
+### Create patient
+POST http://localhost:3000/patients
+Content-Type: application/json
+
+{
+  "password": "toto",
+  "firstName": "Bruno",
+  "lastName": "Crane",
+  "dob": "1972-02-02"
+}
+
+### Get patients
+GET http://localhost:3000/patients
+
+### Get patient 666c524d182097a2d021a793
+GET http://localhost:3000/patients/666c524d182097a2d021a793
+
+
+### Create appointment for patient 666c524d182097a2d021a793
+POST http://localhost:3000/patients/666c524d182097a2d021a793/appointments
+Content-Type: application/json
+
+{
+  "patientId": "666c524d182097a2d021a793",
+  "type": "ultrasound2",
+  "date": "2024-07-02"
+}
+
+### Update appointment 666c489628daf40ea6d04435
+PUT http://localhost:3000/patients/666c524d182097a2d021a793/appointments/666c489628daf40ea6d04435
+Content-Type: application/json
+
+{
+  "patientId": "666c524d182097a2d021a793",
+  "type": "ultrasound",
+  "date": "2024-07-31"
+}
+
+### Get appointment
+GET http://localhost:3000/patients/666bd3e980ff4468a660c1da/appointments/666bd8bf00995a5367407566
+
+
+### Delete appointment
+DELETE http://localhost:3000/patients/666bd3e980ff4468a660c1da/appointments/666bda2c6fcc551987cd0b6f
+
+### Update patient
+PUT http://localhost:3000/patients/666bd1909fd1011aafb15d4f
+Content-Type: application/json
+
+{
+  "password": "toto",
+  "firstName": "Bruno",
+  "lastName": "Crane",
+  "dob": "1972-02-23"
+}
+
+### Delete patient
+DELETE http://localhost:3000/patients/666c524d182097a2d021a793
+
+
