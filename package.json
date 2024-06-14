@@ -4,7 +4,7 @@
   "main": "src/main.js",
   "scripts": {
     "start": "nodemon src/main.js",
-    "hackaton": "NEW_RELIC_APP_NAME=hackaton NEW_RELIC_LICENSE_KEY=NRAK-1IL7Z3FKUGWIMK815WQR72P9UKF node -r newrelic src/main.js",
+    "hackaton": "NEW_RELIC_APP_NAME=hackaton NEW_RELIC_LICENSE_KEY=5d7d7b3b69f600910dd2bdf48ad7e1ccFFFFNRAL node -r newrelic src/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
