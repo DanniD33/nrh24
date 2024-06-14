@@ -2,7 +2,7 @@ const { Patient } = require("../models/patient");
 const { modelToDto}  = require("../models/util/patient.util");
 const { all, children, one, create, update, deleteEntity } = require("../models/models.util");
 const {Appointment} = require("../models/appointments");
-const  {predict} = require("src/bin/chatbot-model");
+// const  {predict} = rçequire("src/bin/chatbot-model");
 exports.all = (req, res, next) => {
     all(Patient)
         .then(all => (res.status(200).json(all.map(patient => (modelToDto(patient))))))
@@ -10,9 +10,9 @@ exports.all = (req, res, next) => {
 };
 
 
-exports.model = (req, res, next) => {
-    return predict(req.body);
-};
+// exports.model = (req, res, next) => {
+//     return predict(req.body);
+// };
 
 exports.get = (req, res, next) => {
     one(Patient, req)
